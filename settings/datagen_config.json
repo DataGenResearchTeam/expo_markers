@@ -1,19 +1,25 @@
 {
-  "num_gpus": 4,
-  "ims_per_batch": 4,
-  "resume": true,
+  "num_gpus": 2,
+  "ims_per_batch": 2,
   "d2_config_file": "COCO-InstanceSegmentation/mask_rcnn_R_101_FPN_3x.yaml",
+  "d2_config_file_0": "COCO-Detection/faster_rcnn_R_101_FPN_3x.yaml",
   "d2_initial_weights": "COCO-InstanceSegmentation/mask_rcnn_R_101_FPN_3x.yaml",
+  "d2_initial_weights_0": "COCO-Detection/faster_rcnn_R_101_FPN_3x.yaml",
+  "resume": true,
+
   "eval_period": 10000,
   "checkpoint_period": 500,
+
   "solver_steps": [60000, 80000],
   "solver_max_iter": 90000,
   "solver_base_lr": 0.003,
-  "DG_DATASET_SIZE": 100,
-  "DG_SYNT_DATA_PATH": "./Expo_Markers_Dataset_V3/",
-  "DG_REAL_DATA_PATH": "./Expo_Test_Set_Real_V2",
-  "DG_OUTPUT_DIR": "./training_output",
-  "DG_EVAL_OUTPUT_PATH": "./eval_output",
-  "data_type": "synt"
+
+  "DG_TRAIN_SET_PATHS": [],
+  "DG_TRAIN_SET_INDS": [],
+  "DG_TEST_SET_PATH": "",
+  "DG_TEST_SET_INDS": "",
+
+  "DG_TRAINING_OUTPUT_DIR": "./training_output",
+  "DG_EVALUATION_OUTPUT_PATH": "./eval_output.pickle"
 
 }

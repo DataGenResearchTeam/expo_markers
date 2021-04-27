@@ -1,0 +1,12 @@
+dataclasses~=0.6
+pandas~=1.1.2
+notebook
+shapely
+numpy~=1.18.5
+detectron2~=0.2.1
+typing~=3.7.4.3
+opencv-python~=4.4.0.42
+matplotlib~=3.3.2
+torch~=1.7.0
+tqdm~=4.49.0
+pycocotools~=2.0.2
