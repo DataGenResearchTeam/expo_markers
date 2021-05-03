@@ -54,31 +54,28 @@ args.config_file < datagen_config < args.opts
 
 [This Colab Notebook](https://colab.research.google.com/drive/1IjvwvA2xdufiIlTPtZgU6Ber03drbfaz) will show you 
 how to use our code.
-### Inference with Pre-trained Models
+### Inference with Pre-Trained Models
 
 ```
-python3 inference/inference_markers.py \
-DG_REAL_DATA_PATH path/to/real/data/dir  \
-DG_SYNT_DATA_PATH path/to/synt/data/dir \
-MODEL.WEIGHTS model.pth \
+python inference/inference_markers.py 
 ```
 
-### Evaluation with Pre-trained Models
+### Evaluation with Pre-Trained Models
 
 ```
-python3 evaluation/eval_markers.py \
-MODEL.WEIGHTS /expo_markers/training_logs/expo_real_1000_0_750/model_final.pth \
+python evaluation/eval_markers.py \
+MODEL.WEIGHTS /path/to/weights/model.pth \
 DG_TEST_SET_PATH /expo_markers/expo_datasets/real_image_dataset/ \
-DG_TEST_SET_INDS "('str0-50',)" \
-DG_EVALUATION_OUTPUT_PATH /expo_markers/evaluation_logs/test_2/t666666666666666.pickle
+DG_TEST_SET_INDS "('0-50',)" \
+DG_EVALUATION_OUTPUT_PATH /output/path/eval.pickle
 ```
 
 ### Training
 ```
 python training/train_markers.py \
-DG_TRAIN_SET_PATHS "('/path/to/dataset/dir',)" \
+DG_TRAIN_SET_PATHS "('/path/to/dataset/dir/',)" \
 DG_TRAIN_SET_INDS "('0-750',)" \
-DG_TRAINING_OUTPUT_DIR /path/to/weights/dir \
+DG_TRAINING_OUTPUT_DIR /path/to/output/weights/dir/ \
 SOLVER.MAX_ITER 30000 \
 SOLVER.STEPS '(25000, 27000)'
 ```
@@ -86,7 +83,7 @@ SOLVER.STEPS '(25000, 27000)'
 
 # License
 
-(TO BE UPDATED) datagen_expo is released under [Apache 2.0 license](LICENSE).
+The Datagen expo dataset is released under [Non-Commercial Data License Agreement](https://www.datagen.tech/data-license-agreement/).
 
 # Citing
 

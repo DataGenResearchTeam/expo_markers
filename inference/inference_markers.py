@@ -170,24 +170,23 @@ class MarkersInference(object):
         return metadata
 
 
-def predict_on_set(
+def predict(
     weights="/expo_markers/training_logs/expo_real_1000_0_750/model_final.pth",
-    DG_TEST_SET_PATH="/expo_markers/expo_datasets/real_image_dataset/",
-    DG_TEST_SET_INDS="0-50",
+    test_set_path="/expo_markers/expo_datasets/real_image_dataset/",
+    test_set_indices="0-50",
     sample_size=10,
     base_save_path=None,
 ):
-
-    # DatasetCatalog.clear()
-    # MetadataCatalog.clear()
+    DatasetCatalog.clear()
+    MetadataCatalog.clear()
     sys.argv = [
         "",
         "MODEL.WEIGHTS",
         weights,
         "DG_TEST_SET_PATH",
-        DG_TEST_SET_PATH,
+        test_set_path,
         "DG_TEST_SET_INDS",
-        DG_TEST_SET_INDS,
+        test_set_indices,
     ]
     args = get_args()
     cfg = setup(args, "test")
@@ -199,44 +198,12 @@ def predict_on_set(
     marker_inference.predict_on_set(
         "marker_test", sample_size=sample_size, base_save_path=base_save_path
     )
+    # marker_inference.predict_on_image("path/to/image.png")
+    # marker_inference.predict_on_video("path/to/video.mp4")
 
 
 if __name__ == "__main__":
-    DatasetCatalog.clear()
-    MetadataCatalog.clear()
     weights = "/expo_markers/training_logs/expo_real_1000_0_750/model_final.pth"
-    DG_TEST_SET_PATH = "/expo_markers/expo_datasets/real_image_dataset/"
-    DG_TEST_SET_INDS = "0-50"
-    sys.argv = [
-        "",
-        "MODEL.WEIGHTS",
-        weights,
-        "DG_TEST_SET_PATH",
-        DG_TEST_SET_PATH,
-        "DG_TEST_SET_INDS",
-        DG_TEST_SET_INDS,
-    ]
-    args = get_args()
-    cfg = setup(args, "test")
-    cfg.defrost()
-    cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.85
-    cfg.freeze()
-    prepare_datasets(cfg, "marker_test")
-    marker_inference = MarkersInference(cfg)
-    marker_inference.predict_on_set("marker_test")
-
-    """
-    python3 inference/inference_markers.py \
-    MDG_TEST_SET_PATH "('path/to/dataset/dir',)"  \
-    DG_TEST_SET_INDS "('50-250',)" \
-    MODEL.WEIGHTS /path/to/model.pth
-        
-    # inference on set
-    marker_inference.predict_on_set("marker_test_synt")
-
-    # inference on image using image path
-    marker_inference.predict_on_image(image_path)
-
-    # inference on video using video path
-    marker_inference.predict_on_video(video_path)
-    """
+    test_set_path = "/expo_markers/expo_datasets/real_image_dataset/"
+    test_set_indices = "0-50"
+    predict(weights, test_set_path, test_set_indices)
