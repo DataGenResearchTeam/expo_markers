@@ -46,11 +46,11 @@ The data can be downloaded from our [blog post](https://www.datagen.tech/trainin
 in detectron2, both the trainer and the predictor objects, are initialized
 using a config object which in our code is constructed from three sources with the 
 following hierarchy:
-args.config_file < datagen_config < args.opts
-1) args.config_file - optional (default='')
-2) datagen_config - a json file located at settings/datagen_config.json 
-   with our default parameters
-3) args.opts - parameter settings from argparse. see settings/datagen_setup.py
+args.config_file < datagen_config < args.opts.
+1) args.config_file - optional (default='').
+2) datagen_config - a json file located at settings/datagen_config.json
+   with our default parameters.
+3) args.opts - parameter settings from argparse. see settings/datagen_setup.py.
 
 [This Colab Notebook](https://colab.research.google.com/drive/1IjvwvA2xdufiIlTPtZgU6Ber03drbfaz) will show you 
 how to use our code.
