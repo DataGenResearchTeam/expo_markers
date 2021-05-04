@@ -21,7 +21,7 @@ The dataset contains three subsets (all include instances segmentation labels): 
 - Expo_Real_DGOffice Real image dataset with 250 images (used for validation and test).
 - Expo_Real_India Real image dataset with 1000 images (used for training and comparison to our synthetic data).
 <br><br>
-<img src="https://i.imgur.com/7MKouv3.png" height=200>  <img src="https://i.imgur.com/iBeUCXV.jpg" height=200>  <img src="https://i.imgur.com/b0xrnBs.jpg" height=200>
+<img src="https://i.imgur.com/7MKouv3.png" height=180>  <img src="https://i.imgur.com/iBeUCXV.jpg" height=180>  <img src="https://i.imgur.com/b0xrnBs.jpg" height=180>
 
 # Our Code
 ## About detectron2
