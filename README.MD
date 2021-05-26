@@ -5,17 +5,16 @@
 
 <font size=5>[Paper](https://arxiv.org/abs/2007.14354) | [Blog Post](https://www.datagen.tech/training-data-using-synthetic-expo-markers-to-train-an-object/)
 </font> <br>
-This repository will enable you to quickly perform visualization, inference, evaluation and training on our EXPO-HD Dataset with Mask R-CNN / Faster R-CNN using [Detectron2](https://github.com/facebookresearch/Detectron2/).
+This repository will enable you to quickly perform visualization, inference, evaluation and training on our Expo Markers Dataset with Mask R-CNN / Faster R-CNN using [Detectron2](https://github.com/facebookresearch/Detectron2/).
 <br>
-See our [Colab Notebook](https://drive.google.com/file/d/1FAfDEpSGItbYsNen0ijilJ7OCy7XD6sg/view?usp=sharing). <br><br>
+See our [Colab Notebook](https://colab.research.google.com/drive/1IjvwvA2xdufiIlTPtZgU6Ber03drbfaz?usp=sharing). <br><br>
 [Visual Results](https://drive.google.com/drive/folders/1dvB5Gi71zaYvxjOmSVes0OkblGkPQRay?usp=sharing) of our trained netweork on our real image test set.
 <br>
 
 [comment]: <> (<img src="./expo_markers.gif" height=250>)
 ![](./expo_markers.gif)
-# The EXPO-HD Dataset
-EXPO-HD: Exact Object Perception using High Distraction Synthetic Data. <br>
-The EXPO-HD Dataset is a dataset of Expo whiteboard markers for the purpose of <br> instance segmentation. 
+# The EXPO Markers Dataset
+The EXPO Markers Dataset is a dataset of Expo whiteboard markers for the purpose of instance segmentation and object detection. 
 The dataset contains three subsets (all include instances segmentation labels):  <br>
 - Expo_Synt_V8 Photorealistic synthetic image dataset with 5000 images (1024x1024).
 - Expo_Real_DGOffice Real image dataset with 250 images (used for validation and test).
@@ -90,10 +89,12 @@ The Datagen expo dataset is released under [Non-Commercial Data License Agreemen
 If you use our dataset or code in your research please use the following BibTeX entry.
 
 ```BibTeX
-@ARTICLE {,
-    author  = "Roey Ron and Gil Elbaz",
-    title   = "EXPO-HD: Exact Object Perception using High Distraction Synthetic Data",
-    journal = "arXiv",
-    year    = "2020"
+@misc{ron2021detection,
+      title={Detection and Segmentation of Custom Objects using High Distraction Photorealistic Synthetic Data}, 
+      author={Roey Ron and Gil Elbaz},
+      year={2021},
+      eprint={2007.14354},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
 }
 ```
