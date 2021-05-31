@@ -7,7 +7,7 @@
 </font> <br>
 This repository will enable you to quickly perform visualization, inference, evaluation and training on our Expo Markers Dataset with Mask R-CNN / Faster R-CNN using [Detectron2](https://github.com/facebookresearch/Detectron2/).
 <br>
-See our [Colab Notebook](https://colab.research.google.com/drive/1IjvwvA2xdufiIlTPtZgU6Ber03drbfaz?usp=sharing). <br><br>
+See our [Colab Notebook](https://drive.google.com/file/d/1FAfDEpSGItbYsNen0ijilJ7OCy7XD6sg/view?usp=sharing). <br><br>
 [Visual Results](https://drive.google.com/drive/folders/1dvB5Gi71zaYvxjOmSVes0OkblGkPQRay?usp=sharing) of our trained netweork on our real image test set.
 <br>
 
