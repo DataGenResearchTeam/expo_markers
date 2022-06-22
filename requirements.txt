@@ -1,4 +1,4 @@
 opencv_python_headless==4.5.1.48
 matplotlib==3.3.3
-numpy==1.19.4
+numpy==1.22.0
 torch==1.7.1
