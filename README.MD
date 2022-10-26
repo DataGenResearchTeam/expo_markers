@@ -3,7 +3,7 @@
 
 <img src="https://i.imgur.com/w3l7y0U.jpg" width="250">  <br>
 
-<font size=5>[Paper](https://arxiv.org/abs/2007.14354) | [Blog Post](https://www.datagen.tech/training-data-using-synthetic-expo-markers-to-train-an-object/)
+<font size=5>[Paper](https://arxiv.org/abs/2007.14354) | [Blog Post](https://datagen.tech/blog/fully-simulated-training-data-how-were-using-synthetic-expo-markers-to-train-a-network/)
 </font> <br>
 This repository will enable you to quickly perform visualization, inference, evaluation and training on our Expo Markers Dataset with Mask R-CNN / Faster R-CNN using [Detectron2](https://github.com/facebookresearch/Detectron2/).
 <br>
@@ -40,7 +40,7 @@ using their instructions.
 
 
 ## Download the Expo Markers Dataset and Pretrained Weights
-The data can be downloaded from our [blog post](https://www.datagen.tech/training-data-using-synthetic-expo-markers-to-train-an-object/).
+The data can be downloaded from our [blog post](https://datagen.tech/blog/fully-simulated-training-data-how-were-using-synthetic-expo-markers-to-train-a-network/).
 ## Quick Start
 in detectron2, both the trainer and the predictor objects, are initialized
 using a config object which in our code is constructed from three sources with the 
